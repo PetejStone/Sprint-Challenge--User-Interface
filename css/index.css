@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -12,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -66,6 +66,10 @@ p {
     line-height: 1.4;
 }
 
+header nav a{
+	text-decoration: none;
+	color: black;
+}
 .container {
     width: 800px;
     margin: 0 auto;
@@ -82,7 +86,7 @@ p {
 .top-content .text-container {
     width: 48%;
     padding: 0 1%;
-    padding-bottom: 20px;  
+    padding-bottom: 20px;
 }
 
 .middle-content {
@@ -104,12 +108,46 @@ p {
 .middle-content .boxes .box {
     width: 12.5%;
     height: 100px;
-    background: black;
     margin: 20px 2.5%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.box:nth-child(1n) {
+	background-color: teal;
+}
+
+.box:nth-child(2n) {
+	background-color: gold;
+}
+
+.box:nth-child(3n) {
+	background-color: coral;
+}
+
+.box:nth-child(4n) {
+	background-color: crimson;
+}
+
+.box:nth-child(5n) {
+	background-color: forestgreen;
+}
+
+.box:nth-child(6n) {
+	background-color: darkorchid;
+}
+
+.box:nth-child(7n) {
+	background-color: hotpink;
+}
+
+.box:nth-child(9n) {
+	background-color: indigo;
+}
+.box:nth-child(10n) {
+	background-color: dodgerblue;
 }
 
 .bottom-content {
