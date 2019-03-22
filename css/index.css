@@ -186,7 +186,7 @@ a, button {
 }
 
 .content-box button {
-	background-color: none;
+	background-color: white;
 	border-radius: 5px;
 	height: 3em;
 	width: 10em;
@@ -274,6 +274,7 @@ input[type=submit] {
   font-size: 1em;
   padding: 0px;
   cursor: pointer;
+	border-radius: 5px;
 }
 
 
@@ -300,4 +301,32 @@ footer nav a {
     color: white;
     text-decoration: none;
 
+}
+
+/*css animations*/
+
+button,
+input[type=submit],
+ a {
+	transition: .3s all;
+}
+
+a:hover {
+	transform: scale(1.2);
+	background: black;
+	color: white;
+	border-radius: 5px;
+	padding: 5px;
+	transform: translateY(-5px); /*brings text back inline after padding added*/
+}
+
+button:hover {
+	background: black;
+	color: white;
+}
+
+input[type=submit]:hover {
+	background-color: white;
+	color: black;
+	border: 1px solid black;
 }
