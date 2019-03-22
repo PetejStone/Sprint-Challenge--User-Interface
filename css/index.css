@@ -135,7 +135,7 @@ a, button {
 }
 
 .middle-content .boxes .box {
-    width: 12.5%;
+    width: 100px;
     height: 100px;
     margin: 20px 2.5%;
     color: white;
