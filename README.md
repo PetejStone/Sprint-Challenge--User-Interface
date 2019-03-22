@@ -33,15 +33,21 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. If you were to describe semantic HTML to the next cohort of students, what would you say?
+Semantic HTML is markup that describes what the tag itself does. For instance,
+"main" is for main content, h1 is for main heading, etc.
 
 2. Name two big differences between ```display: block;``` and ```display: inline;```.
-
+    Display block takes up an entire line of space, inline only takes up the amount
+    of space the element declares, or you declare.
 3. What are the 4 areas of the box model?
-
+    There is content, padding, border and margin.
 4. While using flexbox, what axis does the following property work on: ```align-items: center```?
+    It works on the cross, or Y axis.
 
 5. Explain why git is valuable to a team of developers.
-
+    Git keeps track of every single change you make to a document while keeping
+    the document itself hidden, allowing you to go back in your history and
+    retrieve what you've preiviously written.
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
 ## Project Set Up
@@ -52,13 +58,13 @@ You are expected to be able to answer all these questions. Your responses contri
 - [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
 - [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
- 
+
 Follow these steps for completing your project.
 
 - [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
 - [ ] Add your project manager as a reviewer on the pull-request
 - [ ] Your project manager will count the project as complete by merging the branch back into master.
- 
+
 
 
 ## Minimum Viable Product
