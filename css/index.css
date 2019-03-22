@@ -66,10 +66,30 @@ p {
     line-height: 1.4;
 }
 
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 20em;
+}
 header nav a{
 	text-decoration: none;
 	color: black;
 }
+
+.navigation {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+}
+
+.navigation nav {
+	display: flex;
+	justify-content: space-around;
+	width: 75%;
+}
+
+
 .container {
     width: 800px;
     margin: 0 auto;
@@ -87,6 +107,10 @@ header nav a{
     width: 48%;
     padding: 0 1%;
     padding-bottom: 20px;
+}
+
+.text-container.about {
+	width: 100%;
 }
 
 .middle-content {
@@ -113,6 +137,29 @@ header nav a{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.middle-content.about {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.content-box {
+	width: 45%;
+	height: 28em;
+	margin: 1em;
+	border-bottom: 1px dotted black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.content-box button {
+	background-color: none;
+	border-radius: 5px;
+	height: 3em;
+	width: 10em;
+	border: 1px solid black;
 }
 
 .box:nth-child(1n) {
@@ -181,4 +228,5 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+
 }
