@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -12,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -66,9 +66,38 @@ p {
     line-height: 1.4;
 }
 
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 20em;
+}
+header nav a{
+	text-decoration: none;
+	color: black;
+}
+
+a, button {
+	cursor: pointer;
+}
+
+.navigation {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+}
+
+.navigation nav {
+	display: flex;
+	justify-content: space-around;
+	width: 75%;
+}
+
+
 .container {
     width: 800px;
     margin: 0 auto;
+		max-width: 100%;
 }
 
 .top-content {
@@ -82,7 +111,11 @@ p {
 .top-content .text-container {
     width: 48%;
     padding: 0 1%;
-    padding-bottom: 20px;  
+    padding-bottom: 20px;
+}
+
+.text-container.about {
+	width: 100%;
 }
 
 .middle-content {
@@ -102,14 +135,100 @@ p {
 }
 
 .middle-content .boxes .box {
-    width: 12.5%;
+    width: 100px;
     height: 100px;
-    background: black;
     margin: 20px 2.5%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.middle-content.about {
+	display: flex;
+	flex-wrap: wrap;
+	border-bottom: none;
+}
+
+.content-box {
+	width: 45%;
+	height: 28em;
+	margin: 1em;
+	border-bottom: 1px dashed black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only screen and (max-width: 640px) {
+	.middle-content {
+		justify-content: center;
+	}
+	.content-box {
+		width: 90%;
+	}
+
+	.content-box img {
+		width: fit-content;
+		display: block;
+		margin: 0 auto;
+	}
+	.content-box button {
+		display: block;
+		margin: 0 auto;
+		width: 75% !important; /*without important tag, media query wouldn't apply*/
+	}
+
+	.content-box h2 {
+		text-align: center;
+	}
+}
+
+.content-box button {
+	background-color: white;
+	border-radius: 5px;
+	height: 3em;
+	width: 10em;
+	border: 1px solid black;
+}
+
+.box:nth-child(1n) {
+	background-color: teal;
+}
+
+.box:nth-child(2n) {
+	background-color: gold;
+}
+
+.box:nth-child(3n) {
+	background-color: coral;
+}
+
+.box:nth-child(4n) {
+	background-color: crimson;
+}
+
+.box:nth-child(5n) {
+	background-color: forestgreen;
+}
+
+.box:nth-child(6n) {
+	background-color: darkorchid;
+}
+
+.box:nth-child(7n) {
+	background-color: hotpink;
+}
+
+.box:nth-child(9n) {
+	background-color: indigo;
+}
+.box:nth-child(10n) {
+	background-color: dodgerblue;
 }
 
 .bottom-content {
@@ -125,6 +244,47 @@ p {
 .bottom-content .text-container:last-child {
     padding-right: 0;
 }
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 900px;
+	max-width: 100%;
+	padding: 2em 1em 0px 1em;
+}
+
+.middle-content form h2 {
+	text-align: center;
+	margin-bottom: 3em;
+}
+
+form input, form select, form textarea {
+  margin: 5px 0px;
+	font-size: 16px;
+	}
+
+form input {
+	height: 2em;
+}
+
+input[type=submit] {
+	background-color: black;
+  color: #fff;
+  border: none;
+  height: 2em;
+  margin-top: 5px;
+  font-size: 1em;
+  padding: 0px;
+  cursor: pointer;
+	border-radius: 5px;
+}
+
+
+textarea {
+  font-size: 14px;
+}
+
 
 footer {
     width: 100%;
@@ -143,4 +303,34 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+
 }
+
+/*css animations*/
+
+button,
+input[type=submit],
+ a {
+	transition: .3s all;
+}
+
+a:hover {
+	transform: scale(1.2);
+	background: black;
+	color: white;
+	border-radius: 5px;
+	padding: 5px;
+	transform: translateY(-5px); /*brings text back inline after padding added*/
+}
+
+button:hover {
+	background: black;
+	color: white;
+}
+
+input[type=submit]:hover {
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+}
+/**/
